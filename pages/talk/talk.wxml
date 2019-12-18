@@ -1,0 +1,18 @@
+<!--页面上下不能滑动disable-scroll-->
+
+<view class="" disable-scroll="false">
+  <view class="header">
+    <block wx:for="{{swiperTitle}}" wx:key="id">
+      <view class="title {{index==currentPage?'selected':''}}" data-index="{{index}}"
+      bindtap="turnPage">{{item.text}}</view>
+    </block> 
+  </view>
+
+  <swiper class="swiper" current="{{currentPage}}" bindchange="turnTitle">
+   <!--可一直滚动页面-->
+   <swiper-item id="rentPage"></swiper-item>
+   <swiper-item id="mainPage"></swiper-item>
+   
+  </swiper>
+  
+</view>

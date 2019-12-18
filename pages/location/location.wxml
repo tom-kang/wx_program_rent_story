@@ -1,0 +1,20 @@
+<view class='search'>
+
+    <!--aspectFit:等比缩放了图片，相当于安卓的scaeType="centerInside"，能够完整显示图片-->
+    <view class='search-img'>
+      <image src='/pages/images/search.png' class="heard-search-icon"  mode="aspectFit"></image>
+    </view>
+    <!--confirm-type设置键盘右下角按钮的文字，仅在type='text'时生效-->
+    <input placeholder-style='font-size:12px;'  placeholder='请输入地址'
+    type='text' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'
+    ></input>
+</view>
+
+<view class="getLocation" >
+  <view>{{location}}</view>
+  <view bindtap="getLocation" class="reset">重新定位</view>
+    
+</view>
+
+
+

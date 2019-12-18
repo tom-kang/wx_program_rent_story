@@ -1,0 +1,106 @@
+<!--pages/home/home.wxml-->
+
+<!--is="sort_list"  说明wxml 定义了一个name 为此的模板-->
+<import src = "../common/sort_list.wxml"/>
+
+<!--整个页面控制在  
+滚动视图一定要设置高度
+scroll-y="true"  允许纵向滚动
+-->
+<scroll-view bindscrolltolower="lower" 
+class="scroll-restaurants-list" 
+scroll-y="true" 
+style="height:100%">
+
+    
+  <!--顶部 定位和 搜索框区域-->
+  <view class="heard">
+    <!--页面链接  点击跳转location页面  只是标识这块区域可以跳转 展示作用还是下面的view-->
+    <navigator url="/pages/location/location">
+      <view class="heard-location">
+        <image src="/pages/images/location.png" 
+        class="heard-location-icon"/>
+        <text class="heard-location-text">{{location}}</text>
+      </view>
+    </navigator>
+
+    <!--定位下面的搜索框 宽度100% 圆角-->
+    <navigator url="/pages/index/index">
+      <view class="heard-search">
+       <image src="/pages/images/search.png" class="heard-search-icon"/>
+        {{search}}
+      </view>
+    </navigator>
+
+
+  </view>
+
+  <!--最大6张轮播效果图-->
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="2500" duration="1000">  
+      <block wx:for="{{movies}}" wx:key="index" wx:for-index="index">  
+        <swiper-item>  
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>  
+        </swiper-item>  
+      </block>  
+  </swiper>   
+
+  <view class="header-title">附近房源</view>
+
+  <!--selected sort_list中data-index="1"定义的值 点击通过 e.currentTarget.dataset.index获取-->
+  <template is="sort_list" data="{{selected,sortSelected}}"/>
+
+  <!--下面的房源-->
+  <view>
+      <block wx:for="{{house}}" wx:key="id">
+      <!--点击这一行 进入房屋详情页-->
+      <navigator url="/pages/menu/menu">
+
+        <!-- 房屋信息 价格 距离 大小  包括房屋首页照片 确定展示的是房屋本身照片 -->
+        <view class="house-list">
+          <!--左侧房屋图片-->
+          <view class="house-info-image">
+            <image src="{{item.src}}" class="houses-image"/>
+          </view>
+          <!--房屋信息-->
+
+           <!--房屋基本信息 位置 楼层 发布时间 大小 描述-->
+           <view class="house-info">
+            <!--房屋名字-->
+            <view class="house-info-name">{{item.name}}</view>
+            
+            <view class="house-info-detail">
+                 {{item.layout}} {{item.storey}} 层
+               | {{item.area}} | {{item.deliveryTime}}
+            </view>
+
+            <view class="house-info-describe">
+              <view class="house-info-rating-sales">{{item.describe}}</view>
+            </view>
+
+            <view class="house-distribution-distance"> {{item.distance}} | {{item.time}} 分钟
+            </view>
+           </view>
+
+           
+           <!--价格 是否展示-->
+           <view class="house-price">
+              <view class="house-distribution-price"> {{item.price}}元/{{item.unit}}
+              </view>
+           </view>
+
+        </view>
+        <!--房屋信息end-->
+
+       
+       
+       
+       
+      </navigator>
+
+
+      </block>
+  </view>
+  <!--下面的房源end 实现下拉不断加载-->
+
+</scroll-view>
+

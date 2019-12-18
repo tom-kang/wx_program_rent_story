@@ -1,0 +1,33 @@
+
+
+/**互相 留有空白  横向**/
+.header{
+  display: flex;
+  justify-content: space-around;
+}
+
+.header .title{
+  height: 70rpx;
+  width: 180rpx;
+  line-height: 70rpx;
+  font-size: 35rpx;
+  text-align: center;
+  font-family:KaiTi,Georgia,Serif;
+}
+
+.header .title.selected{
+  border-bottom: 4rpx solid #FFd161;
+  font-weight: bold;
+}
+
+.swiper{
+ 
+}
+
+#rentPage{
+  background-image: linear-gradient(to right, red , yellow);
+}
+
+#mainPage{
+   background-image: linear-gradient(#e66465, #9198e5);
+}

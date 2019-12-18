@@ -1,0 +1,51 @@
+.search{
+  border-radius:10rpx;
+  width:94%;
+  height:50rpx;
+  display:inline-block;
+  background:#E6E6FA;
+  margin-top: 5rpx;
+  margin-left: 5rpx;
+  padding: 5rpx 15rpx;/*使得搜索 小图片距离自己 
+  
+上内边距和下内边距是 5rpx
+右内边距和左内边距是 15rpx
+不挤在一起
+**/
+ line-height: 40rpx;
+
+}
+
+.search-img{
+  width:10%;
+  display:inline-block;
+  height:85%;
+}
+
+.heard-search-icon{
+  display:inline;/**把图像控制在search-img里面 没有这个就会展示完整图片**/
+}
+
+.search input{
+   width:80%;
+   display:inline-block;
+   height:100%;
+}
+
+.getLocation{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin: 5px;
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 1rpx solid #ECECEC;
+  border-bottom: 1rpx solid #ECECEC;
+}
+
+.reset{
+  margin-right: 15rpx;
+  font-size: 25rpx;
+  color: orange
+}

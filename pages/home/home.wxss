@@ -1,0 +1,200 @@
+/*顶部区域*/
+/*justify-content 用于设置或检索弹性盒子元素在主轴（横轴）方向上的【对齐】方式。*/
+/*项目位于各行之前、之间、之后都留有空白的容器内。*/
+
+
+.heard{
+  display: flex;
+  width: 100%;
+  height: 130rpx;
+  flex-direction: column;
+}
+/*定位view xx区xx路*/
+/*相对定位 相对于原来位置移动，元素设置此属性之后仍然处在文档流中，不影响其他元素的布局*/
+.heard-location{
+  position: relative;
+  font-size: 25rpx;
+  padding: 5rpx 15rpx;
+  margin: 10rpx;
+  width: 250rpx;
+  height: 40rpx;
+  background: #FFD39B;
+  color: white;
+  border-radius: 15rpx;
+}
+
+/*定位图标的大小位置*/
+.heard-location-icon{
+  position: absolute;
+  top: 12rpx;
+  height: 25rpx;
+  width: 25rpx;
+}
+/*规定段落中的文本不进行换行：*/
+/*text-overflow 属性规定当文本溢出包含元素时发生的事情。 出现....*/
+.heard-location-text{
+  left: 47rpx;
+  top: 9rpx;
+  position: absolute;/*绝对定位 和图标元素拉开距离 上面的left top 才有作用*/
+  height: 30rpx;
+  width: 190rpx;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/*定位栏 向右的箭头是用这个效果做出来的*/
+/*:after 伪元素在元素之后添加内容 。 默认地，这个伪元素是行内元素，不过可以使用属性 display 改变*/
+/*定义 2D 旋转，在参数中规定角度。*/
+/*这个箭头的效果 是用一个 白色顶部边框和右边的边框 旋转45度得到*/
+.heard-location:after{
+  content: '';
+  position: absolute;
+  top: 20rpx;
+  left: 250rpx; /*距离父元素的向左距离*/
+  width: 8rpx;
+  height: 8rpx;
+  border: 3rpx solid #fff;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+/**下面的搜索框**/
+.heard-search{
+  font-size: 25rpx;
+  padding: 5rpx 15rpx;
+  margin-top: 5rpx;
+  margin-left: 5rpx;
+  height: 40rpx;
+  width: 94%;
+  background: #E6E6FA;
+  border-radius:15rpx;
+  line-height: 40rpx;
+}
+
+.heard-search-icon{
+  height: 21rpx;
+  width: 21rpx;
+}
+
+.swiper {
+  height: 400rpx;
+  width: 100%;
+  border-bottom:20rpx solid #eeebeb; 
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+/*附近房源*/
+.header-title{
+  text-align: center;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 31rpx;
+  font-weight: 600;
+}
+
+
+/*推荐房源 发布时间等等*/
+.overall-sort-list,.filterList,.filterList-footer{
+  background: rgb(124, 47, 47);
+}
+.overall-sort-list{
+  flex-direction: column;
+  border-top: 1px solid rgba(189, 52, 52, 0);
+  display: flex;
+}
+.overall-sort{
+  font-size: 25rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-left: 30rpx;
+}
+.sort-list{
+  justify-content: space-around;
+  display: flex;
+  background: white;
+  width: 100%;
+  height: 80rpx;
+  font-size: 27rpx;
+  color: #6A6A6A;
+  align-content: center;
+  border: 1rpx solid #ECECEC;
+}
+.sort{
+  text-align: center;
+  margin: auto 0;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-right: 1rpx solid #ECECEC; 
+  flex: 1;
+}
+.sort-active{
+  color: black;
+  font-weight: 800;
+}
+/**结束**/
+
+
+.house-list{
+  font-size: 25rpx;
+  display: flex;
+  width: 100%;
+  padding: 10rpx 0;   
+  border-bottom: 1rpx solid #ECECEC;
+  color: #6D6D6D;
+  justify-content: space-between;
+}
+
+.house-info-image image{
+  width: 200rpx;
+  height: 125rpx;
+  margin: 10rpx;
+}
+
+/*** flex: 1 house info下面的 名字  detail  describe 都有相同的长度，且忽略它们内部的内容*/
+.house-info{
+  margin: 0rpx;
+  margin-top: 5rpx;
+  flex: 1;
+  width: 40%;
+  
+}
+/**标题 房屋信息名字**/
+.house-info-name{
+  color: black;
+  font-size: 24rpx;
+  margin-bottom: 7rpx;
+  font-weight:bold;
+}
+
+.house-info-detail{
+  margin-bottom: 10rpx;
+}
+
+.house-info-rating-sales{
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.house-distribution-distance {
+  color:#09BB07
+  
+}
+.house-price {
+  display: flex;
+  width: 110rpx;
+  margin-right:20rpx; 
+  flex-direction: column;
+  justify-content:space-around;
+  font-size: 23rpx;
+}
+
+.house-distribution-price {
+  color: #F4A460
+}
