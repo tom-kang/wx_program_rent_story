@@ -17,10 +17,22 @@
     <view wx:else>请升级微信版本</view>
 </view>
  
- <!--已经拿到用户授权展示的页面-->
-<view wx:else>
-    <view>发布的选项</view>
+ <!--已经拿到用户授权展示的页面  带上标签比如  【房东直租】-->
+<view class="contain" wx:else >
+    <navigator url="/pages/ownerHouse/ownerHouse">    
+      <view>我是房东</view> 
+    </navigator>
 
+    <navigator url="/pages/index/index">    
+      <view>我是二房东</view> 
+    </navigator>
 
+    <navigator url="/pages/index/index">    
+      <view>我要求租</view> 
+    </navigator>
+
+    <navigator url="/pages/index/index">    
+      <view>我要转租</view> 
+    </navigator>
 
 </view>

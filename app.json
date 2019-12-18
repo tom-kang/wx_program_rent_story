@@ -1,10 +1,13 @@
 {
   "pages": [
+    
     "pages/home/home",
     "pages/my/my",
     "pages/talk/talk",
     "pages/location/location",
-    "pages/publish/publish"
+    "pages/publish/publish",
+    "pages/ownerHouse/ownerHouse"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",

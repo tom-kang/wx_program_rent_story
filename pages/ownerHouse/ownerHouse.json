@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "房东直租",
+  "backgroundColor": "#EEEED1",
+  "navigationBarBackgroundColor": "#FFA500",
+  "navigationStyle": "default"
+}
